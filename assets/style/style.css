@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+.container .shape {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.container .shape svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+.container .signUp_container {
+  width: 100%;
+  max-width: 430px;
+  background-color: #FEFEFE;
+  padding: 48px 28px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px 0px rgba(51, 51, 51, 0.08);
+}
+.container .signUp_container h1 {
+  font-family: "Mulish";
+  color: #151515;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.container .signUp_container form {
+  width: 100%;
+}
+.container .signUp_container form label {
+  color: #151515;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+.container .signUp_container form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #EBEBEB;
+  background: #FEFEFE;
+  box-shadow: 0px 4px 18px 0px rgba(51, 51, 51, 0.04);
+  color: #151515;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Mulish";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.container .signUp_container form input::-moz-placeholder {
+  opacity: 0.28;
+  color: #151515;
+  font-family: "Mulish";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.container .signUp_container form input::placeholder {
+  opacity: 0.28;
+  color: #151515;
+  font-family: "Mulish";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.container .signUp_container form .alert {
+  font-size: 14px;
+  color: #FF4D4F;
+  margin-top: 4px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  opacity: 0;
+}
+.container .signUp_container form button {
+  width: 100%;
+  outline: none;
+  border: none;
+  margin-top: 36px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background-color: #6200EE;
+  color: #FEFEFE;
+  cursor: pointer;
+  font-family: "Mulish";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.container .signUp_container p {
+  color: #333333;
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+.container .signUp_container p a {
+  color: #6200EE;
+  font-family: "Mulish";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

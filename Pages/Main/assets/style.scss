@@ -1,0 +1,591 @@
+@import "../../../assets/style/var";
+@import "../../../assets/style/_reset";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .shape {
+        width: 100%;
+        max-height: 100%;
+        height: 1024px;
+        min-height: 1024px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        overflow: hidden;
+
+        svg {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    .MainContainer {
+        width: 100%;
+
+        .MainContainer_header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 12px 0;
+
+            .MainContainer_header_logo {
+                display: flex;
+                width: 100%;
+                gap: 24px;
+
+                .MainContainer_header_logo_box {
+                    width: 100%;
+                    display: flex;
+                    gap: 20px;
+                    max-width: 150px;
+
+                    span {
+                        width: 36px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    p {
+                        font-family: $fontMullish;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 120%;
+                        letter-spacing: 0.576px;
+                        color: $purple500;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+
+
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                form {
+                    width: 100%;
+                    height: 48px;
+                    max-width: 380px;
+                    display: flex;
+                    gap: 12px;
+                    background-color: $gray500;
+                    padding: 0px 0 0 26px;
+                    border-radius: 6px;
+
+                    span {
+                        width: 24px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    input {
+                        width: 100%;
+                        font-family: $fontMullish;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.16px;
+                        color: $gray900;
+                        outline: none;
+                        border: none;
+                        background: transparent;
+
+                        &::-webkit-search-cancel-button {
+                            position: relative;
+                            right: 26px;
+                            height: 17px;
+                            width: 17px;
+                            border-radius: 50%;
+                            -webkit-appearance: none;
+                            background: url("https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg") no-repeat 50% 50%;
+                            background-size: contain;
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+
+                        &::placeholder {
+                            font-family: $fontMullish;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: 0.16px;
+                            color: $white50;
+                            opacity: 0.64;
+                        }
+                    }
+
+                    &:focus-within {
+                        background-color: $white50;
+
+                        span {
+                            svg {
+                                path {
+                                    stroke: $gray500;
+                                }
+                            }
+                        }
+
+                        input {
+                            &::-webkit-search-cancel-button {
+                                opacity: 1;
+                                pointer-events: all;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .MainContainer_header_profile {
+                position: relative;
+
+                .MainContainer_header_profile_img {
+                    width: 32px;
+                    height: 32px;
+                    border: 2px solid #FD648E;
+                    border-radius: 60px;
+                    cursor: pointer;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        scale: 1.2;
+                        border-radius: 50%;
+                    }
+                }
+
+
+                .MainContainer_header_profile_content {
+                    width: 100%;
+                    min-width: 120px;
+                    position: absolute;
+                    top: 110%;
+                    right: 0;
+                    transform: translateX(30%);
+                    background-color: $white50;
+                    border: 1px solid $gray500;
+                    padding: 8px 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    display: none;
+
+                    button {
+                        border: none;
+                        outline: none;
+                        color: $gray900;
+                        background-color: $white50;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                .active {
+                    display: flex;
+                }
+            }
+        }
+
+        .MainContainer_info {
+            margin-top: 36px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+
+            .MainContainer_info_title {
+                h2 {
+                    color: $white50;
+                    font-family: $fontMullish;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+
+                    span {
+                        color: $purple500;
+                    }
+                }
+
+                h5 {
+                    margin-top: 12px;
+                    color: $white50;
+                    font-family: $fontMullish;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+            button {
+                border-radius: 4px;
+                background: $purple500;
+                padding: 10px 24px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-family: $fontMullish;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                color: $white50;
+                border: none;
+                cursor: pointer;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    width: 16px;
+                }
+            }
+
+
+        }
+
+        .MainContainer_cards {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 36px;
+
+            .undefined {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 42px;
+                color: white;
+                font-family: $fontMullish;
+            }
+
+            .MainContainer_cards_item {
+                border-radius: 12px;
+                border: 1px solid $gray50;
+                background: $white50;
+                box-shadow: 0px 4px 24px 0px rgba(51, 51, 51, 0.08);
+                padding: 32px;
+                padding-bottom: 22px;
+                width: 100%;
+                max-width: 397.333px;
+
+                h1 {
+                    color: $gray900;
+                    font-family: $fontMontserat;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                p {
+                    margin-top: 6px;
+                    color: $gray500;
+                    font-family: $fontMullish;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+
+                .MainContainer_cards_item_propety {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 15px;
+
+                    .MainContainer_cards_item_info {
+                        margin-top: 16px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        p {
+                            margin: 0;
+                            color: $gray500;
+                            font-family: $fontMullish;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 15px;
+
+                            span {
+                                color: $gray500;
+                                font-family: $fontMullish;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 15px;
+                            }
+                        }
+
+                        span {
+                            max-width: 90px;
+                            padding: 2px 12px;
+                            border-radius: 8.5px;
+                            background: $purple50;
+                            color: $purple300;
+                            text-align: center;
+                            font-family: $fontMullish;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+
+                    .MainContainer_cards_item_options {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 5px;
+
+                        button {
+                            padding: 8px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 6px 6px 6px 0px;
+                            border: none;
+                            cursor: pointer;
+
+                            &:first-of-type {
+                                background: $orange500;
+                            }
+
+                            &:last-of-type {
+                                background: $purple500;
+                            }
+
+                            &:hover {
+                                opacity: 0.8;
+                                box-shadow: 0px 4px 8px 0px rgba(21, 21, 21, 0.48);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .MainContainer_alerts {
+            width: 100%;
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            z-index: 99;
+
+            .MainContainer_alerts_item {
+                display: flex;
+                width: 100%;
+                max-width: 320px;
+                padding: 14px 10px;
+                gap: 12px;
+                border-radius: 6px;
+                position: absolute;
+                right: 15px;
+                bottom: 15px;
+                display: none;
+
+                .MainContainer_alerts_success_icon {
+                    width: 20px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .MainContainer_alerts_success_text {
+                    h1 {
+                        color: $white50;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: $fontMullish;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                    }
+
+                    p {
+                        color: $white50;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: $fontMullish;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%;
+                        margin-top: 4px;
+                    }
+                }
+            }
+
+            .success {
+                background-color: $green500;
+            }
+
+            .danger {
+                background-color: $orange500;
+            }
+        }
+
+        .MainContainer_adding_modal {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all .3s;
+            opacity: 0;
+            z-index: -1;
+
+            .MainContainer_adding_modal_item {
+                width: 100%;
+                max-width: 430px;
+                background-color: $white50;
+                padding: 24px 28px;
+                border-radius: 12px;
+                box-shadow: 0px 4px 32px 0px rgba(51, 51, 51, 0.04);
+                transform: scale(0);
+                transition: all .3s;
+
+                .MainContainer_adding_modal_title {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 10px;
+
+                    h1 {
+                        color: $gray900;
+                        font-family: $fontMullish;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+
+                    span {
+                        cursor: pointer;
+                        width: 24px;
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+
+                form {
+                    margin-top: 28px;
+
+                    label {
+                        color: $gray900;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: $fontMullish;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                    }
+
+                    input {
+                        margin-top: 4px;
+                        width: 100%;
+                        padding: 14px 16px;
+                        border-radius: 6px;
+                        border: 1px solid $gray50;
+                        background: $white50;
+                        color: $gray900;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: $fontMullish;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                        margin-bottom: 16px;
+
+
+                        &::placeholder {
+                            opacity: 0.28;
+                        }
+                    }
+                }
+
+                .MainContainer_adding_modal_btns {
+                    margin-top: 18px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 12px;
+
+                    button {
+                        width: 100%;
+                        border: none;
+                        padding: 10px 24px;
+                        border-radius: 4px;
+                        font-family: $fontMullish;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        cursor: pointer;
+
+                        &:first-of-type {
+                            border: 1px solid $purple500;
+                            color: $purple500;
+                            background-color: $white50;
+                        }
+
+                        &:last-of-type {
+                            background-color: $purple500;
+                            color: $white50;
+                        }
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+
+        .active {
+            z-index: 99;
+            opacity: 1;
+            transition: all .3s;
+
+            .MainContainer_adding_modal_item {
+                transform: scale(1);
+                transition: all .3s;
+            }
+        }
+
+        @media screen and (min-width:1240px) {
+            width: 1240px;
+        }
+    }
+}

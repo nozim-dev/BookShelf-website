@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookShelf</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="shape">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path
+            d="M0 0H1072.5L1103.2 37.9667C1118.42 56.7948 1117.96 83.8246 1102.12 102.13L304 1024H0V0Z"
+            fill="#333333"
+          />
+        </svg>
+      </div>
+      <div class="MainContainer">
+        <div class="MainContainer_header">
+          <div class="MainContainer_header_logo">
+            <div class="MainContainer_header_logo_box">
+              <span>
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M23.2965 13.8285C23.4013 13.933 23.4844 14.0571 23.5411 14.1938C23.5978 14.3305 23.627 14.477 23.627 14.625C23.627 14.773 23.5978 14.9195 23.5411 15.0562C23.4844 15.1928 23.4013 15.317 23.2965 15.4215L16.5465 22.1715C16.442 22.2763 16.3179 22.3594 16.1812 22.4161C16.0445 22.4728 15.898 22.502 15.75 22.502C15.602 22.502 15.4555 22.4728 15.3188 22.4161C15.1822 22.3594 15.058 22.2763 14.9535 22.1715L11.5785 18.7965C11.4739 18.6919 11.3909 18.5677 11.3343 18.4311C11.2777 18.2944 11.2486 18.1479 11.2486 18C11.2486 17.8521 11.2777 17.7056 11.3343 17.5689C11.3909 17.4323 11.4739 17.3081 11.5785 17.2035C11.6831 17.0989 11.8073 17.0159 11.944 16.9593C12.0806 16.9027 12.2271 16.8736 12.375 16.8736C12.5229 16.8736 12.6694 16.9027 12.8061 16.9593C12.9427 17.0159 13.0669 17.0989 13.1715 17.2035L15.75 19.7842L21.7035 13.8285C21.808 13.7237 21.9322 13.6406 22.0688 13.5839C22.2055 13.5272 22.352 13.498 22.5 13.498C22.648 13.498 22.7945 13.5272 22.9312 13.5839C23.0679 13.6406 23.192 13.7237 23.2965 13.8285Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M9.9135 7.5195C12.1623 5.5803 15.0305 4.50931 18 4.5C24.0525 4.5 29.0768 9 29.6235 14.8027C33.2055 15.309 36 18.3082 36 21.9893C36 26.0302 32.6295 29.25 28.5457 29.25H8.50725C3.843 29.25 0 25.5735 0 20.9655C0 16.9987 2.8485 13.7137 6.6195 12.8812C6.94125 10.9395 8.19 9.0045 9.9135 7.5195ZM11.3827 9.22275C9.6795 10.692 8.7885 12.4628 8.7885 13.8488V14.8568L7.78725 14.967C4.644 15.3112 2.25 17.892 2.25 20.9655C2.25 24.2663 5.0175 27 8.50725 27H28.5457C31.455 27 33.75 24.723 33.75 21.9893C33.75 19.2532 31.455 16.9762 28.5457 16.9762H27.4207V15.8512C27.423 10.8563 23.238 6.75 18 6.75C15.5697 6.75971 13.2229 7.63748 11.3827 9.225V9.22275Z"
+                    fill="#6200EE"
+                  />
+                </svg>
+              </span>
+              <p>Books <span>List</span></p>
+            </div>
+            <form action="" class="FindBookForm">
+              <span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 21L16.65 16.65M11 6C13.7614 6 16 8.23858 16 11M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                    stroke="#FEFEFE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <input
+                name="search"
+                type="search"
+                placeholder="Search for any training you want"
+              />
+            </form>
+          </div>
+          <div class="MainContainer_header_profile">
+            <div class="MainContainer_header_profile_img">
+              <img src="./assets/images/man.jpg" alt="profile" />
+            </div>
+            <div class="MainContainer_header_profile_content">
+              <button class="logOut">Log out</button>
+            </div>
+          </div>
+        </div>
+        <div class="MainContainer_info">
+          <div class="MainContainer_info_title">
+            <h2>You’ve got <span>7 book</span></h2>
+            <h5>Your task today</h5>
+          </div>
+          <button class="addBtn">
+            <span>
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.00001 3.83331V13.1666M3.33334 8.49998H12.6667"
+                  stroke="#FEFEFE"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            Create a book
+          </button>
+        </div>
+        <div class="MainContainer_cards"></div>
+        <div class="MainContainer_alerts">
+          <div class="MainContainer_alerts_item success">
+            <div class="MainContainer_alerts_success_icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_8850_19)">
+                  <path
+                    d="M18.3332 9.23806V10.0047C18.3321 11.8017 17.7503 13.5503 16.6743 14.9896C15.5983 16.4289 14.0859 17.4818 12.3626 17.9913C10.6394 18.5008 8.79755 18.4396 7.1119 17.8169C5.42624 17.1941 3.98705 16.0431 3.00897 14.5356C2.03089 13.0281 1.56633 11.2448 1.68457 9.45166C1.80281 7.65853 2.49751 5.95167 3.66507 4.58562C4.83263 3.21958 6.41049 2.26755 8.16333 1.87152C9.91617 1.47549 11.7501 1.65668 13.3915 2.38806M18.3332 3.33329L9.99984 11.675L7.49984 9.17496"
+                    stroke="#FEFEFE"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_8850_19">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="MainContainer_alerts_success_text">
+              <h1>Success</h1>
+              <p>Kitob ma'lumotlari muvaffaqiyatli tarzda yaratildi.</p>
+            </div>
+          </div>
+          <div class="MainContainer_alerts_item danger">
+            <div class="MainContainer_alerts_success_icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_13_4728)">
+                  <path
+                    d="M12.5 7.49996L7.50002 12.5M7.50002 7.49996L12.5 12.5M18.3334 9.99996C18.3334 14.6023 14.6024 18.3333 10 18.3333C5.39765 18.3333 1.66669 14.6023 1.66669 9.99996C1.66669 5.39759 5.39765 1.66663 10 1.66663C14.6024 1.66663 18.3334 5.39759 18.3334 9.99996Z"
+                    stroke="#FEFEFE"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_13_4728">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="MainContainer_alerts_success_text">
+              <h1>Error</h1>
+              <p>
+                Kitob ma'lumotlari xato kiritilgan yoki yana bir marta urinib
+                ko'ring.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="MainContainer_adding_modal">
+          <div class="MainContainer_adding_modal_item">
+            <div class="MainContainer_adding_modal_title">
+              <h1>Create a book</h1>
+              <span class="closeModal">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 9.5L9 15.5M9 9.5L15 15.5M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                    stroke="#151515"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <form action="" class="addForm">
+              <label for="title">Title</label>
+              <input
+                required
+                type="text"
+                placeholder="Enter your Title"
+                name="title"
+                value="Harry Poter 2"
+              />
+              <label for="author">Author</label>
+              <input
+                type="text"
+                placeholder="Enter your Author"
+                name="author"
+                required
+                value="J. K. Rowling"
+              />
+              <label for="cover">Cover</label>
+              <input
+                required
+                type="text"
+                placeholder="Enter your Cover"
+                name="cover"
+                value="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum ullam, explicabo quam ratione culpa soluta fugiat suscipit sequi voluptatibus laborum, veritatis necessitatibus ipsa? Quia ea, esse nam placeat maiores reprehenderit!"
+              />
+              <label for="published">Published</label>
+              <input
+                required
+                type="text"
+                name="published"
+                placeholder="Enter your Published"
+                value="24.05.1998"
+              />
+              <label for="pages">Pages</label>
+              <input
+                required
+                type="text"
+                placeholder="Enter your Pages"
+                name="pages"
+                value="187"
+              />
+              <div class="MainContainer_adding_modal_btns">
+                <button type="button" class="close">Close</button>
+                <button>Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="MainContainer_adding_modal editModal">
+          <div class="MainContainer_adding_modal_item">
+            <div class="MainContainer_adding_modal_title">
+              <h1>Edit a book card</h1>
+              <span class="closeEditModal">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 9.5L9 15.5M9 9.5L15 15.5M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                    stroke="#151515"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <form action="" class="EditForm">
+              <label for="title">Title</label>
+              <input
+                required
+                type="text"
+                placeholder="Enter your Title"
+                name="title"
+              />  
+              <label for="author">Author</label>
+              <input
+                type="text"
+                placeholder="Enter your Author"
+                name="author"
+                required
+              />
+              <label for="cover">Cover</label>
+              <input
+                required
+                type="text"
+                placeholder="Enter your Cover"
+                name="cover"
+              />
+              <label for="published">Published</label>
+              <input
+                required
+                type="text"
+                name="published"
+                placeholder="Enter your Published"
+              />
+              <label for="pages">Pages</label>
+              <input
+                required
+                type="text"
+                placeholder="Enter your Pages"
+                name="pages"
+              />
+              <div class="MainContainer_adding_modal_btns">
+                <button type="button" class="closeEdit">Close</button>
+                <button>Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script/index.js"></script>
+  </body>
+</html>
+
+<!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum ullam, explicabo quam ratione culpa soluta fugiat suscipit sequi voluptatibus laborum, veritatis necessitatibus ipsa? Quia ea, esse nam placeat maiores reprehenderit! -->
